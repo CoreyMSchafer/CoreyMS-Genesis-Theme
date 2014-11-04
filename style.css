@@ -869,7 +869,7 @@ img.alignright,
 }
 
 .site-header .wrap {
-	padding: 40px 0;
+	padding: 20px 0;
 }
 
 /* ## Title Area
@@ -890,24 +890,29 @@ img.alignright,
 	margin-right: 35px;
 }
 
-.site-avatar-svg{
+.site-avatar, .site-avatar-svg{
 	width: 200px;
 	height: 200px;
 }
 
 .site-avatar-svg:hover .site-avatar-background path{
-	fill: #333;
+	fill: #444;
 }
 
 .site-title {
-	font-size: 32px;
+	font-size: 44px;
 	font-weight: 400;
+	font-variant: small-caps;
 	line-height: 1.2;
+	margin-top: 30px;
 }
 
-.site-title a,
+.site-title a {
+	color: #3d454c;
+}
+
 .site-title a:hover {
-	color: #333;
+	color: #444;
 }
 
 .header-image .site-title > a {
@@ -1412,6 +1417,8 @@ li.comment {
 	.site-avatar {
 		float: none;
 		margin-right: 0;
+		width: 100%;
+		height: 150px;
 	}
 
 	.site-avatar-svg{
