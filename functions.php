@@ -27,6 +27,8 @@ add_theme_support( 'custom-background' );
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+remove_action( 'wp_head', 'genesis_load_favicon' );
+
 add_action( 'genesis_site_title', 'add_avatar',9);
 function add_avatar(){
     ?>
