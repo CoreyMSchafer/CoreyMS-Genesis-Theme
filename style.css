@@ -946,6 +946,7 @@ img.alignright,
 	float: right;
 	text-align: right;
 	width: 360px;
+	margin-top: 40px;
 }
 
 
@@ -967,7 +968,7 @@ img.alignright,
 .genesis-nav-menu a {
 	color: #333;
 	display: block;
-	padding: 30px 24px;
+	padding: 20px 24px;
 }
 
 .genesis-nav-menu a:hover,
@@ -1024,7 +1025,7 @@ img.alignright,
 	color: #fff;
 	float: right;
 	list-style-type: none;
-	padding: 30px 0;
+	padding: 20px 0;
 }
 
 .genesis-nav-menu > .right > a {
@@ -1428,6 +1429,10 @@ li.comment {
 
 	.site-header .wrap {
 		padding: 20px 5%;
+	}
+
+	.site-header .widget-area {
+		margin-top: 0;
 	}
 
 	.header-image .title-area {
