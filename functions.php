@@ -36,7 +36,7 @@ function add_avatar(){
         <?php
             //Add Site Avatar SVG
             $siteAvatar =
-                '<svg class="site-avatar-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 441.5 441.5" enable-background="new 0 0 441.5 441.5" xml:space="preserve">
+                '<svg class="site-avatar-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 441.5 441.5" enable-background="new 0 0 441.5 441.5" xml:space="preserve">
                     <g class="site-avatar-background">
                         <path fill="#56616B" d="M79.178 390.133C30.781 349.639 0 288.789 0 220.75C0 98.833 98.833 0 220.75 0S441.5 98.833 441.5 220.75 c0 63.558-26.86 120.842-69.848 161.12"/>
                     </g>

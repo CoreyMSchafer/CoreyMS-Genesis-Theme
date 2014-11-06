@@ -877,7 +877,6 @@ img.alignright,
 
 .title-area {
 	float: left;
-	padding: 10px 0;
 	width: 800px;
 }
 
@@ -891,8 +890,8 @@ img.alignright,
 }
 
 .site-avatar, .site-avatar-svg{
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 }
 
 .site-avatar-svg:hover .site-avatar-background path{
@@ -900,11 +899,11 @@ img.alignright,
 }
 
 .site-title {
-	font-size: 44px;
+	font-size: 40px;
 	font-weight: 400;
 	font-variant: small-caps;
 	line-height: 1.2;
-	margin-top: 30px;
+	margin-top: 15px;
 }
 
 .site-title a {
@@ -968,7 +967,7 @@ img.alignright,
 .genesis-nav-menu a {
 	color: #333;
 	display: block;
-	padding: 20px 24px;
+	padding: 15px 24px;
 }
 
 .genesis-nav-menu a:hover,
@@ -1025,7 +1024,7 @@ img.alignright,
 	color: #fff;
 	float: right;
 	list-style-type: none;
-	padding: 20px 0;
+	padding: 15px 0;
 }
 
 .genesis-nav-menu > .right > a {
@@ -1419,11 +1418,6 @@ li.comment {
 		float: none;
 		margin-right: 0;
 		width: 100%;
-		height: 150px;
-	}
-
-	.site-avatar-svg{
-		width: 150px;
 		height: 150px;
 	}
 
