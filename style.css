@@ -1097,6 +1097,7 @@ img.alignright,
 
 .content .entry {
 	background-color: #fff;
+	border-top: 10px solid #E3E0DD;
 }
 
 .entry-content ol,
@@ -1273,6 +1274,7 @@ li.comment {
 	background-color: #fff;
 	margin-bottom: 40px;
 	padding: 40px;
+	border-top: 10px solid #E5A5A2;
 }
 
 
@@ -1489,6 +1491,11 @@ li.comment {
 	.sidebar .widget,
 	.site-header {
 		padding: 0;
+	}
+
+	.entry,
+	.sidebar .widget {
+		padding-top: 15px;
 	}
 
 	.archive-pagination li a {
