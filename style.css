@@ -462,7 +462,7 @@ th {
 .site-inner,
 .wrap {
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 1400px;
 }
 
 .site-inner {
@@ -478,7 +478,7 @@ th {
 .content-sidebar-sidebar .content-sidebar-wrap,
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-	width: 980px;
+	width: 1160px;
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap {
@@ -494,7 +494,7 @@ th {
 
 .content {
 	float: right;
-	width: 800px;
+	width: 940px;
 }
 
 .content-sidebar .content,
@@ -506,7 +506,7 @@ th {
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content,
 .sidebar-sidebar-content .content {
-	width: 580px;
+	width: 700px;
 }
 
 .full-width-content .content {
@@ -517,7 +517,7 @@ th {
 
 .sidebar-primary {
 	float: right;
-	width: 360px;
+	width: 420px;
 }
 
 .sidebar-content .sidebar-primary,
@@ -529,7 +529,7 @@ th {
 
 .sidebar-secondary {
 	float: left;
-	width: 180px;
+	width: 200px;
 }
 
 .content-sidebar-sidebar .sidebar-secondary {
@@ -877,7 +877,7 @@ img.alignright,
 
 .title-area {
 	float: left;
-	width: 800px;
+	width: 940px;
 }
 
 .header-full-width .title-area {
@@ -944,7 +944,7 @@ img.alignright,
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 360px;
+	width: 420px;
 	margin-top: 40px;
 }
 
@@ -1344,11 +1344,11 @@ li.comment {
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-	width: 340px;
+	width: 420px;
 }
 
 .footer-widgets-1 {
-	margin-right: 60px;
+	margin-right: 70px;
 }
 
 .footer-widgets-1,
@@ -1379,6 +1379,51 @@ li.comment {
 
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1800px) {
+
+	.site-inner,
+	.wrap {
+		max-width: 1200px;
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		width: 980px;
+	}
+
+	.content,
+	.title-area {
+		width: 800px;
+	}
+
+	.sidebar-secondary {
+		width: 180px;
+	}
+
+	.sidebar-content-sidebar .content,
+	.sidebar-sidebar-content .content,
+	.content-sidebar-sidebar .content {
+		width: 580px;
+	}
+
+	.sidebar-primary,
+	.site-header .widget-area {
+		width: 360px;
+	}
+
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		width: 360px;
+	}
+
+	.footer-widgets-1 {
+		margin-right: 60px;
+	}
+
+}
 
 @media only screen and (max-width: 1200px) {
 
