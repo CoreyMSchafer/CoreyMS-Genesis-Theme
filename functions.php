@@ -33,6 +33,12 @@ function sp_read_more_link() {
     return '<div class="more-div"><a class="more-link" href="' . get_permalink() . '">Read more...</a></div>';
 }
 
+//* Enqueue Varela Round Google font
+add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
+function sp_load_google_fonts() {
+    wp_enqueue_style( 'google-font-varela', '//fonts.googleapis.com/css?family=Varela+Round', array(), CHILD_THEME_VERSION );
+}
+
 //* Remove default avatar that ships with genesis
 remove_action( 'wp_head', 'genesis_load_favicon' );
 

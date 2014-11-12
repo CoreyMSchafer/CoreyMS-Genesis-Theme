@@ -129,8 +129,8 @@ input[type="search"] {
 body {
 	background-color: #c7cdd2;
 	color: #333;
-	font-family: Lato, sans-serif;
-	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-size: 19px;
 	font-weight: 300;
 	line-height: 1.625;
 	margin: 0;
@@ -223,7 +223,7 @@ h4,
 h5,
 h6 {
 	color: #333;
-	font-family: Lato, sans-serif;
+	font-family: 'Varela Round', sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 10px;
@@ -677,7 +677,7 @@ th {
 }
 
 .entry-title {
-	font-size: 36px;
+	font-size: 44px;
 }
 
 .entry-title a,
@@ -899,11 +899,11 @@ img.alignright,
 }
 
 .site-title {
-	font-size: 40px;
+	font-size: 44px;
 	font-weight: 400;
 	font-variant: small-caps;
 	line-height: 1.2;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 .site-title a {
@@ -923,7 +923,7 @@ img.alignright,
 
 .site-description {
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.5;
 }
 
@@ -942,6 +942,7 @@ img.alignright,
 --------------------------------------------- */
 
 .site-header .widget-area {
+	font-family: 'Varela Round', sans-serif;
 	float: right;
 	text-align: right;
 	width: 420px;
