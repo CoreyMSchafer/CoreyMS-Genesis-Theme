@@ -1093,6 +1093,7 @@ img.alignright,
 .entry {
 	margin-bottom: 40px;
 	padding: 50px 60px;
+	border-radius: 3px;
 }
 
 .content .entry {
@@ -1122,6 +1123,30 @@ img.alignright,
 .entry-content code {
 	background-color: #333;
 	color: #ddd;
+}
+
+.more-div {
+	margin-bottom: 20px;
+}
+
+.more-link {
+	padding: 10px 14px;
+	background: #E57D78;
+	color: #FFF;
+	border-radius: 5px;
+}
+
+.more-link:hover {
+	color: #FFF;
+	background: #e5554e;
+}
+
+.reqList {
+	background: #FAF4EC;
+	padding: 40px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 40px;
 }
 
 /* ## Entry Meta
@@ -1275,6 +1300,7 @@ li.comment {
 	margin-bottom: 40px;
 	padding: 40px;
 	border-top: 10px solid #E5A5A2;
+	border-radius: 3px;
 }
 
 

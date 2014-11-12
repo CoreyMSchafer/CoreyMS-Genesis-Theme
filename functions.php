@@ -27,8 +27,16 @@ add_theme_support( 'custom-background' );
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+//* Modify the WordPress read more link
+add_filter( 'the_content_more_link', 'sp_read_more_link' );
+function sp_read_more_link() {
+    return '<div class="more-div"><a class="more-link" href="' . get_permalink() . '">Read more...</a></div>';
+}
+
+//* Remove default avatar that ships with genesis
 remove_action( 'wp_head', 'genesis_load_favicon' );
 
+//* Add custom avatar SVG before site_title
 add_action( 'genesis_site_title', 'add_avatar',9);
 function add_avatar(){
     ?>
