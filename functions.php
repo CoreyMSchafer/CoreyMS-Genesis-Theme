@@ -8,10 +8,10 @@ define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
 define( 'CHILD_THEME_VERSION', '2.1.2' );
 
 //* Enqueue Google Fonts
-add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
-function genesis_sample_google_fonts() {
+add_action( 'wp_enqueue_scripts', 'genesis_google_fonts' );
+function genesis_google_fonts() {
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Varela+Round', array(), CHILD_THEME_VERSION );
 
 }
 
@@ -31,12 +31,6 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 add_filter( 'the_content_more_link', 'sp_read_more_link' );
 function sp_read_more_link() {
     return '<div class="more-div"><a class="more-link" href="' . get_permalink() . '">Read more...</a></div>';
-}
-
-//* Enqueue Varela Round Google font
-add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
-function sp_load_google_fonts() {
-    wp_enqueue_style( 'google-font-varela', '//fonts.googleapis.com/css?family=Varela+Round', array(), CHILD_THEME_VERSION );
 }
 
 //* Remove default avatar that ships with genesis

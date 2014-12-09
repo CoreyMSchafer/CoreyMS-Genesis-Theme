@@ -915,7 +915,6 @@ img.alignright,
 }
 
 .header-image .site-title > a {
-	background: url(images/logo.png) no-repeat left;
 	float: left;
 	min-height: 60px;
 	width: 100%;
@@ -925,6 +924,7 @@ img.alignright,
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5;
+    color: #999;
 }
 
 .site-description,
