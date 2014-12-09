@@ -64,3 +64,6 @@ function add_avatar(){
     </div>
     <?php
 }
+
+//* Enable the superfish script
+add_filter( 'genesis_superfish_enabled', '__return_true' );
