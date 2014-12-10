@@ -30,7 +30,15 @@ jQuery(document).ready(function($) {
         closeOnContentClick: true,
         mainClass: 'mfp-img-mobile',
         image: {
-            verticalFit: true
+            verticalFit: true,
+            titleSrc: function(item) {
+                if(item.el.siblings('.wp-caption-text').text() === '') {
+                    //If image doesn't have a caption, use Image Title
+                    return item.el.children('img').attr('title') + '<small>' + entryTitle + '</small>';
+                } else {
+                    return item.el.siblings('.wp-caption-text').text() + '<small>' + entryTitle + '</small>';
+                }
+            }
         }
     });
 
