@@ -25,6 +25,15 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $('.single-image').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-mobile',
+        image: {
+            verticalFit: true
+        }
+    });
+
     //Link Article Images on home and archive pages to the article.
     $('.home, .archive').find('.article-image').each(function(){
         this.href = $(this).closest('article').find('.entry-title a').attr('href');
