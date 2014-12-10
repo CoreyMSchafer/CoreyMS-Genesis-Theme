@@ -15,6 +15,15 @@ function genesis_google_fonts() {
 
 }
 
+add_action( 'wp_enqueue_scripts', 'custom_scripts' );
+function custom_scripts() {
+
+	wp_enqueue_style('magnific-css', get_stylesheet_directory_uri() . '/css/magnific-popup.css');
+	wp_enqueue_script('magnific-js', get_stylesheet_directory_uri() . '/js/magnific.min.js',array('jquery'),'1.0.0', true);
+	wp_enqueue_script('coreyms-js', get_stylesheet_directory_uri() . '/js/coreyms.js',array('jquery'),'1.0.0', true);
+
+}
+
 //* Add HTML5 markup structure
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
