@@ -459,6 +459,10 @@ th {
 /* ## Site Containers
 --------------------------------------------- */
 
+.site-container {
+    word-wrap: break-word;
+}
+
 .site-inner,
 .wrap {
 	margin: 0 auto;
