@@ -1600,3 +1600,60 @@ li.comment {
 	}
 
 }
+
+/* Print Stylesheet*/
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	.nav-primary,
+	.header-widget-area,
+	.sidebar,
+	.footer-widgets,
+	.site-footer,
+	.sharedaddy,
+	.comment-respond,
+	#disqus_thread{
+		display: none;
+	}
+
+	.title-area {
+		width: 450px;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.site-inner {
+		padding-top: 0;
+	}
+
+	a:not([href^="http://coreyms"])::after {
+		content: " ( " attr(href) " )";
+	}
+
+	@page {
+		margin: .5cm;
+	}
+
+	h2, ul {
+		page-break-after: avoid;
+	}
+
+	p, ul {
+		orphans: 3;
+		widows: 3;
+		pt: 14pt;
+	}
+
+	.aligncenter{
+		text-align: center;
+	}
+	img {
+		width: auto;
+		max-height: 500px;
+	}
+}
