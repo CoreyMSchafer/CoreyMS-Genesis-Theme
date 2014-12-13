@@ -39,6 +39,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Plugins
 	- Genesis eNews Extended
 	- Jetpack
+	- HighlightJS
 - Site Header
 	- Title Area
 	- Widget Area
@@ -862,6 +863,12 @@ img.alignright,
 	display: none;
 }
 
+/* ## HighlightJS
+--------------------------------------------- */
+
+.hljs {
+	word-wrap: normal;
+}
 
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
