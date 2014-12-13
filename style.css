@@ -958,7 +958,7 @@ img.alignright,
 	float: right;
 	text-align: right;
 	width: 420px;
-	margin-top: 40px;
+	margin-top: 47px;
 }
 
 
@@ -1037,12 +1037,6 @@ img.alignright,
 	color: #fff;
 	float: right;
 	list-style-type: none;
-	padding: 15px 0;
-}
-
-.genesis-nav-menu > .right > a {
-	display: inline;
-	padding: 0;
 }
 
 .genesis-nav-menu > .rss > a {
