@@ -164,7 +164,7 @@ textarea:focus,
 }
 
 a {
-	color: #e5554e;
+	color: #428bca;
 	text-decoration: none;
 }
 
@@ -691,7 +691,7 @@ th {
 }
 
 .entry-title a:hover {
-	color: #e5554e;
+	color: #428bca;
 }
 
 .widget-title {
@@ -933,7 +933,7 @@ img.alignright,
 }
 
 .site-description {
-	font-size: 16px;
+	font-size: 17px;
 	font-weight: 400;
 	line-height: 1.5;
     color: #999;
@@ -948,6 +948,71 @@ img.alignright,
 .header-image .site-title {
 	display: block;
 	text-indent: -9999px;
+}
+
+.social-links-div {
+	margin-top: 10px;
+	height: 40px;
+}
+
+.social-links-li {
+	display: inline-block;
+	margin-right: 4px;
+	width: 40px;
+	height: 40px;
+}
+
+.social-link {
+	width: 40px;
+	height: 40px;
+}
+
+.social-youtube .outer-shape {
+	fill: #985454;
+}
+
+.social-youtube:hover .outer-shape {
+	fill: #CD201F;
+}
+
+.social-github .outer-shape {
+	fill: #666;
+}
+
+.social-github:hover .outer-shape {
+	fill: #333;
+}
+
+.social-gplus .outer-shape {
+	fill: #936c6b;
+}
+
+.social-gplus:hover .outer-shape {
+	fill: #CC3732;
+}
+
+.social-twitter .outer-shape {
+	fill: #7fa6c4;
+}
+
+.social-twitter:hover .outer-shape {
+	fill: #55ACEE;
+}
+
+.social-linkedin .outer-shape {
+	fill: #286a8d;
+}
+
+.social-linkedin:hover .outer-shape {
+	fill: #0077B5;
+}
+
+.social-rss .outer-shape {
+	fill: #cd9a66;
+}
+
+.social-rss:hover .outer-shape {
+	fill: #FA9B39;
 }
 
 /* ## Widget Area
@@ -1506,7 +1571,7 @@ li.comment {
 	}
 
 	.site-header .widget-area {
-		margin-top: 0;
+		margin-top: 20px;
 	}
 
 	.header-image .title-area {
@@ -1618,7 +1683,8 @@ li.comment {
 	.sharedaddy,
 	.jp-relatedposts,
 	.comment-respond,
-	#disqus_thread{
+	#disqus_thread,
+	.social-links-div{
 		display: none;
 	}
 

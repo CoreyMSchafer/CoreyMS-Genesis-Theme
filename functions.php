@@ -18,9 +18,9 @@ function genesis_google_fonts() {
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 function custom_scripts() {
 
-	wp_enqueue_style('magnific-css', get_stylesheet_directory_uri() . '/css/magnific-popup.css');
-	wp_enqueue_script('magnific-js', get_stylesheet_directory_uri() . '/js/magnific.min.js',array('jquery'),'1.0.0', true);
-	wp_enqueue_script('coreyms-js', get_stylesheet_directory_uri() . '/js/coreyms.js',array('jquery'),'1.0.0', true);
+	wp_enqueue_style( 'magnific-css', get_stylesheet_directory_uri() . '/css/magnific-popup.css' );
+	wp_enqueue_script( 'magnific-js', get_stylesheet_directory_uri() . '/js/magnific.min.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'coreyms-js', get_stylesheet_directory_uri() . '/js/coreyms.js', array( 'jquery' ), '1.0.0', true );
 
 }
 
@@ -39,21 +39,21 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 //* Modify the WordPress read more link
 add_filter( 'the_content_more_link', 'sp_read_more_link' );
 function sp_read_more_link() {
-    return '<div class="more-div"><a class="more-link" href="' . get_permalink() . '">Read more...</a></div>';
+	return '<div class="more-div"><a class="more-link" href="' . get_permalink() . '">Read more...</a></div>';
 }
 
 //* Remove default avatar that ships with genesis
 remove_action( 'wp_head', 'genesis_load_favicon' );
 
 //* Add custom avatar SVG before site_title
-add_action( 'genesis_site_title', 'add_avatar',9);
-function add_avatar(){
-    ?>
-    <div class="site-avatar">
-        <?php
-            //Add Site Avatar SVG
-            $siteAvatar =
-                '<svg class="site-avatar-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 441.5 441.5" enable-background="new 0 0 441.5 441.5" xml:space="preserve">
+add_action( 'genesis_site_title', 'add_avatar', 9 );
+function add_avatar() {
+	?>
+	<div class="site-avatar">
+		<?php
+		//Add Site Avatar SVG
+		$siteAvatar =
+			'<svg class="site-avatar-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 441.5 441.5" enable-background="new 0 0 441.5 441.5" xml:space="preserve">
                     <g class="site-avatar-background">
                         <path fill="#56616B" d="M79.178 390.133C30.781 349.639 0 288.789 0 220.75C0 98.833 98.833 0 220.75 0S441.5 98.833 441.5 220.75 c0 63.558-26.86 120.842-69.848 161.12"/>
                     </g>
@@ -64,14 +64,92 @@ function add_avatar(){
                     </g>
                 </svg>';
 
-            //Put anchor tag around Site Avatar
-            $link = sprintf( '<a href="%s">%s</a>', trailingslashit( home_url() ), $siteAvatar );
+		//Put anchor tag around Site Avatar
+		$link = sprintf( '<a href="%s">%s</a>', trailingslashit( home_url() ), $siteAvatar );
 
-            //Echo Avatar
-            echo $link;
-        ?>
-    </div>
-    <?php
+		//Echo Avatar
+		echo $link;
+		?>
+	</div>
+<?php
+}
+
+//* Add custom avatar SVG before site_title
+add_action( 'genesis_site_description', 'add_social_links', 11 );
+function add_social_links() {
+	?>
+	<div class="social-links-div">
+		<ul>
+			<li class="social-links-li">
+				<a class="social-link social-youtube" href="https://www.youtube.com/user/schafer5">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					     viewBox="0 0 100 100" style="height: 40px; width: 40px;">
+						<circle class="outer-shape" cx="50" cy="50" r="48"></circle>
+						<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);"
+						      transform="translate(25,25) scale(0.5)"
+						      d="M97.284,26.359c-1-5.352-5.456-9.346-10.574-9.839c-12.221-0.784-24.488-1.42-36.731-1.428 c-12.244-0.007-24.464,0.616-36.687,1.388c-5.137,0.497-9.592,4.47-10.589,9.842C1.567,34.058,1,41.869,1,49.678 s0.568,15.619,1.703,23.355c0.996,5.372,5.451,9.822,10.589,10.314c12.226,0.773,24.439,1.561,36.687,1.561 c12.239,0,24.515-0.688,36.731-1.479c5.118-0.497,9.574-5.079,10.574-10.428C98.43,65.278,99,57.477,99,49.676 C99,41.88,98.428,34.083,97.284,26.359z M38.89,63.747V35.272l26.52,14.238L38.89,63.747z"></path>
+					</svg>
+				</a>
+			</li>
+			<li class="social-links-li">
+				<a class="social-link social-github" href="https://github.com/CoreyMSchafer">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					     viewBox="0 0 100 100" style="height: 40px; width: 40px;">
+						<circle class="outer-shape" cx="50" cy="50" r="48"></circle>
+						<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);"
+						      transform="translate(25,25) scale(0.5)"
+						      d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M79.099,79.099 c-3.782,3.782-8.184,6.75-13.083,8.823c-1.245,0.526-2.509,0.989-3.79,1.387v-7.344c0-3.86-1.324-6.699-3.972-8.517 c1.659-0.16,3.182-0.383,4.57-0.67c1.388-0.287,2.855-0.702,4.402-1.245c1.547-0.543,2.935-1.189,4.163-1.938 c1.228-0.75,2.409-1.723,3.541-2.919s2.082-2.552,2.847-4.067s1.372-3.334,1.818-5.455c0.446-2.121,0.67-4.458,0.67-7.01 c0-4.945-1.611-9.155-4.833-12.633c1.467-3.828,1.308-7.991-0.478-12.489l-1.197-0.143c-0.829-0.096-2.321,0.255-4.474,1.053 c-2.153,0.798-4.57,2.105-7.249,3.924c-3.797-1.053-7.736-1.579-11.82-1.579c-4.115,0-8.039,0.526-11.772,1.579 c-1.69-1.149-3.294-2.097-4.809-2.847c-1.515-0.75-2.727-1.26-3.637-1.532c-0.909-0.271-1.754-0.439-2.536-0.503 c-0.782-0.064-1.284-0.079-1.507-0.048c-0.223,0.031-0.383,0.064-0.478,0.096c-1.787,4.53-1.946,8.694-0.478,12.489 c-3.222,3.477-4.833,7.688-4.833,12.633c0,2.552,0.223,4.889,0.67,7.01c0.447,2.121,1.053,3.94,1.818,5.455 c0.765,1.515,1.715,2.871,2.847,4.067s2.313,2.169,3.541,2.919c1.228,0.751,2.616,1.396,4.163,1.938 c1.547,0.543,3.014,0.957,4.402,1.245c1.388,0.287,2.911,0.511,4.57,0.67c-2.616,1.787-3.924,4.626-3.924,8.517v7.487 c-1.445-0.43-2.869-0.938-4.268-1.53c-4.899-2.073-9.301-5.041-13.083-8.823c-3.782-3.782-6.75-8.184-8.823-13.083 C9.934,60.948,8.847,55.56,8.847,50s1.087-10.948,3.231-16.016c2.073-4.899,5.041-9.301,8.823-13.083s8.184-6.75,13.083-8.823 C39.052,9.934,44.44,8.847,50,8.847s10.948,1.087,16.016,3.231c4.9,2.073,9.301,5.041,13.083,8.823 c3.782,3.782,6.75,8.184,8.823,13.083c2.143,5.069,3.23,10.457,3.23,16.016s-1.087,10.948-3.231,16.016 C85.848,70.915,82.88,75.317,79.099,79.099L79.099,79.099z"></path>
+					</svg>
+				</a>
+			</li>
+			<li class="social-links-li">
+				<a class="social-link social-gplus" title="YouTube"
+				   href="https://plus.google.com/+CoreySchafer44/posts">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					     viewBox="0 0 100 100" style="height: 40px; width: 40px;">
+						<circle class="outer-shape" cx="50" cy="50" r="48"></circle>
+						<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);"
+						      transform="translate(25,25) scale(0.5)"
+						      d="M1.079,84.227c-0.024-0.242-0.043-0.485-0.056-0.73C1.036,83.742,1.055,83.985,1.079,84.227z M23.578,55.086 c8.805,0.262,14.712-8.871,13.193-20.402c-1.521-11.53-9.895-20.783-18.701-21.046C9.264,13.376,3.357,22.2,4.878,33.734 C6.398,45.262,14.769,54.823,23.578,55.086z M98.999,25.501v-8.164c0-8.984-7.348-16.335-16.332-16.335H17.336 c-8.831,0-16.078,7.104-16.323,15.879c5.585-4.917,13.333-9.026,21.329-9.026c8.546,0,34.188,0,34.188,0l-7.651,6.471H38.039 c7.19,2.757,11.021,11.113,11.021,19.687c0,7.201-4.001,13.393-9.655,17.797c-5.516,4.297-6.562,6.096-6.562,9.749 c0,3.117,5.909,8.422,8.999,10.602c9.032,6.368,11.955,12.279,11.955,22.15c0,1.572-0.195,3.142-0.58,4.685h29.451 C91.652,98.996,99,91.651,99,82.661V31.625H80.626v18.374h-6.125V31.625H56.127V25.5h18.374V7.127h6.125V25.5H99L98.999,25.501z M18.791,74.301c2.069,0,3.964-0.057,5.927-0.057c-2.598-2.52-4.654-5.608-4.654-9.414c0-2.259,0.724-4.434,1.736-6.366 c-1.032,0.073-2.085,0.095-3.17,0.095c-7.116,0-13.159-2.304-17.629-6.111v6.435l0.001,19.305 C6.116,75.76,12.188,74.301,18.791,74.301L18.791,74.301z M1.329,85.911c-0.107-0.522-0.188-1.053-0.243-1.591 C1.141,84.858,1.223,85.389,1.329,85.911z M44.589,92.187c-1.442-5.628-6.551-8.418-13.675-13.357 c-2.591-0.836-5.445-1.328-8.507-1.36c-8.577-0.092-16.566,3.344-21.074,8.457c1.524,7.436,8.138,13.068,16.004,13.068h27.413 c0.173-1.065,0.258-2.166,0.258-3.295C45.007,94.502,44.86,93.329,44.589,92.187z"></path>
+					</svg>
+				</a>
+			</li>
+			<li class="social-links-li">
+				<a class="social-link social-twitter" href="https://twitter.com/CoreyMSchafer">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					     viewBox="0 0 100 100" style="height: 40px; width: 40px;">
+						<circle class="outer-shape" cx="50" cy="50" r="48"></circle>
+						<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);"
+						      transform="translate(25,25) scale(0.5)"
+						      d="M99.001,19.428c-3.606,1.608-7.48,2.695-11.547,3.184c4.15-2.503,7.338-6.466,8.841-11.189 c-3.885,2.318-8.187,4-12.768,4.908c-3.667-3.931-8.893-6.387-14.676-6.387c-11.104,0-20.107,9.054-20.107,20.223 c0,1.585,0.177,3.128,0.52,4.609c-16.71-0.845-31.525-8.895-41.442-21.131C6.092,16.633,5.1,20.107,5.1,23.813 c0,7.017,3.55,13.208,8.945,16.834c-3.296-0.104-6.397-1.014-9.106-2.529c-0.002,0.085-0.002,0.17-0.002,0.255 c0,9.799,6.931,17.972,16.129,19.831c-1.688,0.463-3.463,0.71-5.297,0.71c-1.296,0-2.555-0.127-3.783-0.363 c2.559,8.034,9.984,13.882,18.782,14.045c-6.881,5.424-15.551,8.657-24.971,8.657c-1.623,0-3.223-0.096-4.796-0.282 c8.898,5.738,19.467,9.087,30.82,9.087c36.982,0,57.206-30.817,57.206-57.543c0-0.877-0.02-1.748-0.059-2.617 C92.896,27.045,96.305,23.482,99.001,19.428z"></path>
+					</svg>
+				</a>
+			</li>
+			<li class="social-links-li">
+				<a class="social-link social-linkedin" href="https://www.linkedin.com/in/coreymschafer">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					     viewBox="0 0 100 100" style="height: 40px; width: 40px;">
+						<circle class="outer-shape" cx="50" cy="50" r="48"></circle>
+						<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);"
+						      transform="translate(25,25) scale(0.5)"
+						      d="M82.539,1H17.461C8.408,1,1,8.408,1,17.461v65.078C1,91.592,8.408,99,17.461,99h65.078C91.592,99,99,91.592,99,82.539 V17.461C99,8.408,91.592,1,82.539,1z M37.75,80.625H25.5V37.75h12.25V80.625z M31.625,31.625c-3.383,0-6.125-2.742-6.125-6.125 s2.742-6.125,6.125-6.125s6.125,2.742,6.125,6.125S35.008,31.625,31.625,31.625z M80.625,80.625h-12.25v-24.5 c0-3.383-2.742-6.125-6.125-6.125s-6.125,2.742-6.125,6.125v24.5h-12.25V37.75h12.25v7.606c2.526-3.47,6.389-7.606,10.719-7.606 c7.612,0,13.782,6.856,13.782,15.312L80.625,80.625L80.625,80.625z"></path>
+					</svg>
+				</a>
+			</li>
+			<li class="social-links-li">
+				<a class="social-link social-rss" href="http://coreyms.com/feed/">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					     viewBox="0 0 100 100" style="height: 40px; width: 40px;">
+						<circle class="outer-shape" cx="50" cy="50" r="48"></circle>
+						<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);"
+						      transform="translate(25,25) scale(0.5)"
+						      d="M14.044,72.866C6.848,72.866,1,78.736,1,85.889c0,7.192,5.848,12.997,13.044,12.997c7.223,0,13.062-5.804,13.062-12.997 C27.106,78.736,21.267,72.866,14.044,72.866z M1.015,34.299v18.782c12.229,0,23.73,4.782,32.392,13.447 C42.057,75.172,46.832,86.725,46.832,99h18.865C65.697,63.321,36.672,34.3,1.015,34.299L1.015,34.299z M1.038,1v18.791 C44.657,19.792,80.16,55.329,80.16,99H99C99,44.979,55.048,1,1.038,1z"></path>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</div>
+<?php
 }
 
 //* Enable the superfish script
