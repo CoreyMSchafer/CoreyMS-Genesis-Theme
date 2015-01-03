@@ -154,3 +154,10 @@ function add_social_links() {
 
 //* Enable the superfish script
 add_filter( 'genesis_superfish_enabled', '__return_true' );
+
+//* Change the footer text
+add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
+function sp_footer_creds_filter( $creds ) {
+	$creds = '[footer_copyright] &middot; <a href="http://coreyms.com">CoreyMS</a> &middot; Corey Schafer';
+	return $creds;
+}
