@@ -827,12 +827,12 @@ img.alignright,
 }
 
 .sidebar .widget.enews-widget {
-	background-color: #333;
+	background-color: #696e73;
 }
 
 .enews-widget input,
 .enews-widget input:focus {
-	border: 1px solid #333;
+	border: 1px solid #666;
 }
 
 .enews-widget input {
